@@ -1,0 +1,4 @@
+<div class="doc-section" id="attribution">
+    <p class="remove-bottom"><small>Created by <a href="http://www.davegamache.com">Dave Gamache</a>, 2011 &copy;<br />
+    I want to thank <a href="http://twitter.com/#!/smileyj68">@smileyj68</a> for all the inspiration and for helping me get to a place to create Skeleton, <a href="http://twitter.com/#!/mdo">@mdo</a> for being a boss, giving awesome feedback and helping me get Skeleton out of the door, <a href="http://html5boilerplate.com/">the whole HTML5 Boilerplate project/team</a> that served as an indispensable resource, <a href="http://www.960.gs">960.gs</a> for a great starting point and their PSD template and <a href="http://twitter.com/#!/ashleybatz">@ashleybatz</a> for putting up with my late night coding and shenanigans.</small></p>
+</div>
