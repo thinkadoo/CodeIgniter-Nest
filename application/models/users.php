@@ -108,29 +108,10 @@ class Users extends CI_Model
 
         $user = R::load('users', $userupdate->id);
 
-/*        if ($userupdate["username"]) {
-            $user->username = ($userupdate["username"]);
-        }
-        if ($userupdate["password"]) {
-            $user->password = ($userupdate["password"]);
-        }
-        if ($userupdate["email"]) {
-            $user->email = ($userupdate["email"]);
-        }
-        if ($userupdate["firstname"]) {
-            $user->firstname = ($userupdate["firstname"]);
-        }
-        if ($userupdate["lastname"]) {
-            $user->lastname = ($userupdate["lastname"]);
-        }
-
-        $properties = array("username", "password", "email", "firstname", "lastname");*/
-
-        foreach($properties as $property)
+        foreach($_POST as $key => $value)
         {
-            if(!empty($userupdate[$property]))
-            {
-                $user->$property = $userupdate[$property];
+            if (!empty($value)){
+                $user->$key = sanitizeString($value);
             }
         }
 
