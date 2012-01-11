@@ -34,12 +34,13 @@ class Users extends CI_Model
 
     }
 
-    public function create($userin, $passin, $firstnamein, $lastnamein, $emailin)
+    public function create()
     {
         $this->load->library('rb');
+        $this->load->helper('utils');
 
         $created = false;
-        $username = $userin;
+        $username = $_POST['username'];
 
         $userObject = R::findOne('users', ' username = ?', array($username));
 
@@ -51,11 +52,10 @@ class Users extends CI_Model
 
             $user = R::dispense('users');
 
-            $user->username = $userin;
-            $user->password = $passin;
-            $user->firstname = $firstnamein;
-            $user->lastname = $lastnamein;
-            $user->email = $emailin;
+            foreach($_POST as $key => $value)
+            {
+                $user->$key = sanitizeString($value);
+            }
 
             R::begin();
             try {
@@ -108,7 +108,7 @@ class Users extends CI_Model
 
         $user = R::load('users', $userupdate->id);
 
-        if ($userupdate["username"]) {
+/*        if ($userupdate["username"]) {
             $user->username = ($userupdate["username"]);
         }
         if ($userupdate["password"]) {
@@ -124,6 +124,15 @@ class Users extends CI_Model
             $user->lastname = ($userupdate["lastname"]);
         }
 
+        $properties = array("username", "password", "email", "firstname", "lastname");*/
+
+        foreach($properties as $property)
+        {
+            if(!empty($userupdate[$property]))
+            {
+                $user->$property = $userupdate[$property];
+            }
+        }
 
         R::begin();
         try {
