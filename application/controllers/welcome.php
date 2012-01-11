@@ -21,7 +21,7 @@ class Welcome extends CI_Controller {
 	{
         $this->load->library('session');
 
-        echo "<pre>".print_r($this->session->userdata, true)."</pre>";
+        //echo "<pre>".print_r($this->session->userdata, true)."</pre>";
 
         $this->load->view('home/begin');
         $this->load->view('home/sidebar');

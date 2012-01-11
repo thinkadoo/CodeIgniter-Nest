@@ -33,9 +33,9 @@ class Signup extends CI_Controller
         if (isset($_POST['username'])) {
             $user = sanitizeString($_POST['username']);
             $pass = sanitizeString($_POST['password']);
-            $firstname = sanitizeString($_POST['firstname']);
+/*            $firstname = sanitizeString($_POST['firstname']);
             $lastname = sanitizeString($_POST['lastname']);
-            $email = sanitizeString($_POST['email']);
+            $email = sanitizeString($_POST['email']);*/
 
             if ($user == "" || $pass == "") {
                 $this->load->view('home/begin');
@@ -53,7 +53,7 @@ class Signup extends CI_Controller
             else
             {
 
-                $created = $this->Users->create($user, $pass, $firstname, $lastname, $email);
+                $created = $this->Users->create();
 
                 if ($created == false) {
                     $this->load->view('home/begin');

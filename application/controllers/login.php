@@ -15,7 +15,7 @@ class Login extends CI_Controller
     {
         $this->session->sess_destroy();
 
-        echo "<pre>".print_r($this->session->userdata, true)."</pre>";
+        //echo "<pre>".print_r($this->session->userdata, true)."</pre>";
 
         $this->load->view('home/begin');
         $this->load->view('home/sidebar');
@@ -74,7 +74,7 @@ class Login extends CI_Controller
                         'username' => $user,
                     );
 
-                    echo "<pre>".print_r($this->session->userdata, true)."</pre>";
+                    //echo "<pre>".print_r($this->session->userdata, true)."</pre>";
 
                     $this->load->view('home/begin');
                     $this->load->view('home/sidebar');

@@ -13,6 +13,8 @@
             <input type="text" id="lastname" maxlength='16' name='lastname' value='' />
             <label for="email">Email</label>
             <input type="text" id="email" maxlength='32' name='email' value='' />
+            <label for="age">Age</label>
+            <input type="text" id="age" maxlength='3' name='age' value='' />
             <button type="submit">Submit</button>
         </form>
     </div>
