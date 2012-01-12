@@ -30,6 +30,7 @@ class Users extends CI_Model
                 $validated = true;
                 return $validated;
             }
+
         }
 
     }
@@ -101,6 +102,7 @@ class Users extends CI_Model
     public function update()
     {
         $this->load->library('rb');
+        $this->load->helper('utils');
 
         $userupdate = R::dispense('users');
 
