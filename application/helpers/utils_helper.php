@@ -39,4 +39,32 @@ function showProfile($user)
 		$row = mysql_fetch_row($result);
 		echo stripslashes($row[1]) . "<br clear=left /><br />";
 	}
+
+
+}
+
+function myRegularCURL($url = NULL)
+{
+    if ($url) {
+        // create curl resource
+        $ch = curl_init();
+
+        // set url
+        curl_setopt($ch, CURLOPT_URL, $url);
+
+        //return the transfer as a string
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+        // $output contains the output string
+        $output = curl_exec($ch);
+
+        // close curl resource to free up system resources
+        curl_close($ch);
+
+        return $output;
+
+    } else {
+
+        return NULL;
+    }
 }

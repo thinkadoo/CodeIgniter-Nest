@@ -38,10 +38,12 @@ class Users extends CI_Model
     public function create()
     {
         $this->load->library('rb');
-        $this->load->helper('utils');
+        //$this->load->helper('utils');
+        $this->load->helper('htmlpurifier');
 
         $created = false;
-        $username = $_POST['username'];
+        //$username = $_POST['username'];
+        $username = purify($_POST['username']);
 
         $userObject = R::findOne('users', ' username = ?', array($username));
 
@@ -55,7 +57,8 @@ class Users extends CI_Model
 
             foreach($_POST as $key => $value)
             {
-                $user->$key = sanitizeString($value);
+                //$user->$key = sanitizeString($value);
+                $user->$key = purify($value);
             }
 
             R::begin();
@@ -103,6 +106,7 @@ class Users extends CI_Model
     {
         $this->load->library('rb');
         $this->load->helper('utils');
+        $this->load->helper('htmlpurifier');
 
         $userupdate = R::dispense('users');
 
@@ -113,7 +117,8 @@ class Users extends CI_Model
         foreach($_POST as $key => $value)
         {
             if (!empty($value)){
-                $user->$key = sanitizeString($value);
+                //$user->$key = sanitizeString($value);
+                $user->$key = purify($value);
             }
         }
 
