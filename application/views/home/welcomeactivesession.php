@@ -1,5 +1,5 @@
 <div class="doc-section" id="whatAndWhy">
-    <p>Welcome back <strong><?php echo $username ?></strong>.</p>
+    <h3>Welcome back <strong><?php echo $username ?></strong>!</h3>
     <p><img src="profileimages/<?php echo $username ?>.jpg" alt=""></p>
     <p>Profile Description: <strong><?php echo $description ?></strong></p>
     <p>First Name: <strong><?php echo $firstname ?></strong></p>
