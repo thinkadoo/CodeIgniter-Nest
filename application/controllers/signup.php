@@ -7,8 +7,9 @@ class Signup extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Users');
-        $this->load->helper('utils');
+        //$this->load->helper('utils');
         $this->load->library('session');
+        $this->load->helper('htmlpurifier');
     }
 
     public function index()
@@ -31,8 +32,8 @@ class Signup extends CI_Controller
     public function signupFunction()
     {
         if (isset($_POST['username'])) {
-            $user = sanitizeString($_POST['username']);
-            $pass = sanitizeString($_POST['password']);
+            $user = purify($this->input->post('username', TRUE));
+            $pass = purify($this->input->post('password', TRUE));
 
             if ($user == "" || $pass == "") {
                 $this->load->view('home/begin');

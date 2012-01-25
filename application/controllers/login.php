@@ -7,7 +7,7 @@ class Login extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Users');
-        $this->load->helper('utils');
+        //$this->load->helper('utils');
         $this->load->library('session');
         $this->load->helper('htmlpurifier');
     }
