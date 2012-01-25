@@ -2,7 +2,9 @@
     <h3>Sign up</h3>
     <p>Sign up here.</p>
     <div class="four columns alpha">
-        <form method='post' action='index.php/signup/signupFunction'>
+        <form method='post' action='index.php/signup/signupFunction' enctype='multipart/form-data'>
+            <label for="image">Profile Image</label>
+            <input type='file' id="image" name='image' maxlength='32' />
             <label for="username">Username</label>
             <input type="text" id="username" maxlength='16' name='username' value='' />
             <label for="password">Password</label>

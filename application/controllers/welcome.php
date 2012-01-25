@@ -35,7 +35,7 @@ class Welcome extends CI_Controller {
         );
         $this->load->view('home/sidebaractivesession');
         $this->load->view('home/contentbegin');
-        $this->load->view('home/header');
+        //$this->load->view('home/header');
         $this->load->view('home/rulelarge');
         $this->load->view('home/welcomeactivesession',$data);
 

@@ -45,11 +45,10 @@ class Users extends CI_Model
     public function create()
     {
         $this->load->library('rb');
-        //$this->load->helper('utils');
         $this->load->helper('htmlpurifier');
 
         $created = false;
-        //$username = $_POST['username'];
+
         $username = purify($_POST['username']);
 
         $userObject = R::findOne('users', ' username = ?', array($username));
@@ -64,7 +63,6 @@ class Users extends CI_Model
 
             foreach($_POST as $key => $value)
             {
-                //$user->$key = sanitizeString($value);
                 $user->$key = purify($value);
             }
 
@@ -75,6 +73,7 @@ class Users extends CI_Model
                 $created = true;
             }
             catch (Exception $e) {
+                print_r($e);
                 R::rollback();
                 $created = false;
                 echo 'the user was not stored in the database';
