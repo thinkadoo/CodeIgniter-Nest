@@ -5,7 +5,6 @@
             <li><a href="index.php/welcome">Home</a></li>
             <li><a href="index.php/signup">Sign up</a></li>
             <li><a href="index.php/login">Log in</a></li>
-            <li><a href="index.php/logout">Log out</a></li>
         </ul>
     </nav>
     &nbsp;
