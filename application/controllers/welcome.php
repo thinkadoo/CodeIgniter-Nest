@@ -20,8 +20,15 @@ class Welcome extends CI_Controller {
     }
     else
     {
+        //echo "<pre>".print_r($this->session->userdata, true)."</pre>";
+
         $data = array(
             'username' => $this->session->userdata('user_name'),
+            'firstname' => $this->session->userdata('user_firstname'),
+            'lastname' => $this->session->userdata('user_lastname'),
+            'email' => $this->session->userdata('user_email'),
+            'age' => $this->session->userdata('user_age'),
+            'description' => $this->session->userdata('user_description'),
         );
         $this->load->view('home/welcomeactivesession',$data);
 

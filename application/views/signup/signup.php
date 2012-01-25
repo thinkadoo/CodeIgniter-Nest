@@ -14,7 +14,9 @@
             <label for="email">Email</label>
             <input type="text" id="email" maxlength='32' name='email' value='' />
             <label for="age">Age</label>
-            <input type="text" id="age" maxlength='3' name='age' value='' />
+            <input type="text" id="age" maxlength='32' name='age' value='' />
+            <label for="description">Profile Description</label>
+            <textarea id="description" maxlength='128' name='description' value='' ></textarea>
             <button type="submit">Submit</button>
         </form>
     </div>

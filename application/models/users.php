@@ -6,6 +6,7 @@ class Users extends CI_Model
     public function idUser($user, $pass)
     {
         $this->load->library('rb');
+        $this->load->library('session');
 
         $validated = false;
         $validatedU = false;
@@ -28,6 +29,12 @@ class Users extends CI_Model
             }
             if ($validatedU && $validatedP == true) {
                 $validated = true;
+                $this->session->set_userdata('user_username', $arrays['username']);
+                $this->session->set_userdata('user_firstname', $arrays['firstname']);
+                $this->session->set_userdata('user_lastname', $arrays['lastname']);
+                $this->session->set_userdata('user_email', $arrays['email']);
+                $this->session->set_userdata('user_age', $arrays['age']);
+                $this->session->set_userdata('user_description', $arrays['description']);
                 return $validated;
             }
 

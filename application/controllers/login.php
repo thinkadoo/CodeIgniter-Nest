@@ -76,8 +76,6 @@ class Login extends CI_Controller
                         'username' => $user,
                     );
 
-                    //echo "<pre>".print_r($this->session->userdata, true)."</pre>";
-
                     $this->load->view('home/begin');
                     $this->load->view('home/sidebar');
                     $this->load->view('home/contentbegin');
