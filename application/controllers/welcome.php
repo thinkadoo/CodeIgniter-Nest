@@ -9,19 +9,22 @@ class Welcome extends CI_Controller {
         //echo "<pre>".print_r($this->session->userdata, true)."</pre>";
 
         $this->load->view('home/begin');
+        //$this->load->view('home/sidebar');
+        //$this->load->view('home/contentbegin');
+        //$this->load->view('home/header');
+        //$this->load->view('home/rulelarge');
+
+    if (($this->session->userdata('user_name')) == '')
+    {
         $this->load->view('home/sidebar');
         $this->load->view('home/contentbegin');
         $this->load->view('home/header');
         $this->load->view('home/rulelarge');
-
-    if (($this->session->userdata('user_name')) == '')
-    {
         $this->load->view('home/welcome');
     }
     else
     {
         //echo "<pre>".print_r($this->session->userdata, true)."</pre>";
-
         $data = array(
             'username' => $this->session->userdata('user_name'),
             'firstname' => $this->session->userdata('user_firstname'),
@@ -30,6 +33,10 @@ class Welcome extends CI_Controller {
             'age' => $this->session->userdata('user_age'),
             'description' => $this->session->userdata('user_description'),
         );
+        $this->load->view('home/sidebaractivesession');
+        $this->load->view('home/contentbegin');
+        $this->load->view('home/header');
+        $this->load->view('home/rulelarge');
         $this->load->view('home/welcomeactivesession',$data);
 
     }
