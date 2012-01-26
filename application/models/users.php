@@ -123,7 +123,6 @@ class Users extends CI_Model
         foreach($_POST as $key => $value)
         {
             if (!empty($value)){
-                //$user->$key = sanitizeString($value);
                 $user->$key = purify($value);
             }
         }

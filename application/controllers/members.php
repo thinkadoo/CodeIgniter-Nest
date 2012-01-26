@@ -19,7 +19,6 @@ class Members extends CI_Controller {
         else
         {
             $data['members'] = $this->Users->getAll();
-            //echo "<pre>".print_r($data['members'], true)."</pre>";
 
             $this->load->view('home/sidebaractivesession');
             $this->load->view('home/contentbegin');
