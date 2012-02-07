@@ -4,6 +4,8 @@
 
 This project is a mobile social network lite in progress…
 
+See example here: http://cl.ly/DcQm
+
 Planned Features:
 
 • A sign-up process
