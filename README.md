@@ -15,5 +15,9 @@ Planned Features:
 • User profiles with uploaded thumbnails
 • A member directory
 
-• Adding members as friends
-• Public and private messaging between members
+• A member detail view
+
+• Add members as friends
+• Public messaging between members
+
+• Private messaging between members
