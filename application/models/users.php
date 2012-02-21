@@ -104,6 +104,8 @@ class Users extends CI_Model
 
         $arrays = R::exportAll($all);
 
+        //echo '<pre>'.print_r($arrays, true).'</pre>';
+
         return $arrays;
 
     }

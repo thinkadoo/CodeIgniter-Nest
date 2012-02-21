@@ -6,6 +6,7 @@
         <h5><?php if($member['description']): ?><p><?= $member['description'] ?></p><?php endif ?></h5>
         <p><img src="profileimages/<?= $member['username'] ?>.jpg" alt=""></p>
         <p><?= $member['firstname'] ?> <?= $member['lastname'] ?></p>
+        <p><a href="index.php/detail/index/<?php echo $member['id']; ?>">Detail</a></p>
         <hr>
     </li>
     <?php endforeach ?>
