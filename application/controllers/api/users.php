@@ -20,7 +20,6 @@ class Users extends REST_Controller {
                 'lastname' => $this->put('lastname'),
                 'email' => $this->put('email'),
                 'age' => $this->put('age'),
-                'description' => $this->put('description'),
                 'description' => $this->put('description')
         );
 
@@ -50,7 +49,6 @@ class Users extends REST_Controller {
             'lastname' => $this->put('lastname'),
             'email' => $this->put('email'),
             'age' => $this->put('age'),
-            'description' => $this->put('description'),
             'description' => $this->put('description')
         );
 
