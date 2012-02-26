@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 require APPPATH.'/libraries/REST_Controller.php';
-
+// changed file name caps
 class Users extends REST_Controller {
 
     function __construct()
