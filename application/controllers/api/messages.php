@@ -14,11 +14,12 @@ class Messages extends REST_Controller {
     function put_put()
     {
         $data = array(
-            // Example data - Replace with fields from the 'messages' table.
-            //    'name' => $this->put('name'),
-            //    'email' => $this->put('email')
+                'auth' => $this->put('auth'),
+                'recip' => $this->put('recip'),
+                'pm	' => $this->put('pm	'),
+                'time' => $this->put('time'),
+                'message' => $this->put('message')
         );
-
 
         $id = $this->Messages_model->save($data);
 
@@ -40,11 +41,12 @@ class Messages extends REST_Controller {
     function post_post()
     {
         $data = array(
-            // Example data - Replace with fields from the 'messages' table.
-            //    'name' => $this->post('name'),
-            //    'email' => $this->post('email')
+            'auth' => $this->put('auth'),
+            'recip' => $this->put('recip'),
+            'pm	' => $this->put('pm	'),
+            'time' => $this->put('time'),
+            'message' => $this->put('message')
         );
-
 
         $id = $this->Messages_model->update($this->post('id'),$data);
 

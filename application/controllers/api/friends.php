@@ -14,11 +14,9 @@ class Friends extends REST_Controller {
     function put_put()
     {
         $data = array(
-            // Example data - Replace with fields from the 'friends' table.
-            //    'name' => $this->put('name'),
-            //    'email' => $this->put('email')
+                'user' => $this->put('user'),
+                'friend' => $this->put('friend')
         );
-
 
         $id = $this->Friends_model->save($data);
 
@@ -40,11 +38,9 @@ class Friends extends REST_Controller {
     function post_post()
     {
         $data = array(
-            // Example data - Replace with fields from the 'friends' table.
-            //    'name' => $this->post('name'),
-            //    'email' => $this->post('email')
+            'user' => $this->put('user'),
+            'friend' => $this->put('friend')
         );
-
 
         $id = $this->Friends_model->update($this->post('id'),$data);
 

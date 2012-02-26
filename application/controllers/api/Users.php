@@ -14,11 +14,14 @@ class Users extends REST_Controller {
     function put_put()
     {
         $data = array(
-            // Example data - Replace with fields from the 'users' table.
-            //    'name' => $this->put('name'),
-            //    'email' => $this->put('email')
+                'username' => $this->put('username'),
+                'password' => $this->put('password'),
+                'firstname' => $this->put('firstname'),
+                'lastname' => $this->put('lastname'),
+                'email' => $this->put('email'),
+                'age' => $this->put('age'),
+                'description' => $this->put('description')
         );
-
 
         $id = $this->Users_model->save($data);
 
@@ -40,11 +43,14 @@ class Users extends REST_Controller {
     function post_post()
     {
         $data = array(
-            // Example data - Replace with fields from the 'users' table.
-            //    'name' => $this->post('name'),
-            //    'email' => $this->post('email')
+            'username' => $this->put('username'),
+            'password' => $this->put('password'),
+            'firstname' => $this->put('firstname'),
+            'lastname' => $this->put('lastname'),
+            'email' => $this->put('email'),
+            'age' => $this->put('age'),
+            'description' => $this->put('description')
         );
-
 
         $id = $this->Users_model->update($this->post('id'),$data);
 
