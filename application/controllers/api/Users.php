@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 require APPPATH.'/libraries/REST_Controller.php';
-// changed file name caps
+
 class Users extends REST_Controller {
 
     function __construct()
@@ -14,13 +14,13 @@ class Users extends REST_Controller {
     function put_put()
     {
         $data = array(
-                'username' => $this->put('username'),
-                'password' => $this->put('password'),
-                'firstname' => $this->put('firstname'),
-                'lastname' => $this->put('lastname'),
-                'email' => $this->put('email'),
-                'age' => $this->put('age'),
-                'description' => $this->put('description')
+            'username' => $this->put('username'),
+            'password' => $this->put('password'),
+            'firstname' => $this->put('firstname'),
+            'lastname' => $this->put('lastname'),
+            'email' => $this->put('email'),
+            'age' => $this->put('age'),
+            'description' => $this->put('description')
         );
 
         $id = $this->Users_model->save($data);
